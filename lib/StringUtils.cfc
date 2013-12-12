@@ -12,6 +12,65 @@ component
 	// ---
 
 
+	/**
+	* @output false
+	* @description "Capitalizes a String changing the first letter to title case as per Character.toTitleCase(char)."
+	**/
+	public string function capitalize( required string value ) {
+
+		return(
+			reReplace( value, "^(.)", "\U\1", "one" )
+		);
+
+	}
+
+
+	/**
+	* @output false
+	* @description "Checks if the String contains any character in the given set of characters."
+	* @hint "Changed function name from [containsAny] in order to make it consistent with the containsSubstring function (which was also renamed)."
+	**/
+	public boolean function containsAnySubstring( 
+		required string value,
+		required array substrings
+		) {
+
+		for ( var substring in substrings ) {
+
+			if ( containsSubstring( value, substring ) ) {
+
+				return( true );
+
+			}
+
+		}
+
+		return( false );
+
+	}
+
+
+	/**
+	* @output false
+	* @description "Checks if String contains a search character or string, handling null."
+	* @hint "Changed function name from [contains] in order to make ColdFusion compatible (conflicts with operator)."
+	**/
+	public boolean function containsSubstring( 
+		required string value,
+		string substring = "" 
+		) {
+
+		if ( ! len( substring ) ) {
+
+			return( false );
+
+		}
+
+		return( !! find( substring, value ) );
+
+	}
+
+
 	/*
 	String 	abbreviate(String str, int maxWidth)
 	Abbreviates a String using ellipses.
@@ -21,9 +80,6 @@ component
 	
 	String 	abbreviateMiddle(String str, String middle, int length)
 	Abbreviates a String to the length passed, replacing the middle characters with the supplied replacement String.
-	
-	String 	capitalize(String str)
-	Capitalizes a String changing the first letter to title case as per Character.toTitleCase(char).
 	
 	String 	center(String str, int size)
 	Centers a String in a larger String of size size using the space character (' ').
@@ -42,18 +98,6 @@ component
 	
 	String 	chop(String str)
 	Remove the last character from a String.
-	
-	boolean 	contains(String str, char searchChar)
-	Checks if String contains a search character, handling null.
-	
-	boolean 	contains(String str, String searchStr)
-	Checks if String contains a search String, handling null.
-	
-	boolean 	containsAny(String str, char[] searchChars)
-	Checks if the String contains any character in the given set of characters.
-	
-	boolean 	containsAny(String str, String searchChars)
-	Checks if the String contains any character in the given set of characters.
 	
 	boolean 	containsIgnoreCase(String str, String searchStr)
 	Checks if String contains a search String irrespective of case, handling null.

@@ -14,6 +14,10 @@ least trying to reproduce). Since ColdFusion doesn't support like-named function
 signatures, the multi-signature functions will have to be collapsed into one function with 
 internal routing logic based on the arguments.
 
+_**NOTE:** In some cases, I'll have to change the function names in the ColdFusion version of the
+library since they conflict with built-in functions or operator names (ex, "contains" will have
+to become something like "containsSubstring" )._
+
 * __abbreviate__( String str, int maxWidth ) :: String
 * __abbreviate__( String str, int offset, int maxWidth ) :: String
 * __abbreviateMiddle__( String str, String middle, int length ) :: String
@@ -24,10 +28,10 @@ internal routing logic based on the arguments.
 * __chomp__( String str ) :: String
 * __chomp__( String str, String separator ) :: String
 * __chop__( String str ) :: String
-* __contains__( String str, char searchChar ) :: boolean
-* __contains__( String str, String searchStr ) :: boolean
-* __containsAny__( String str, char[] searchChars ) :: boolean
-* __containsAny__( String str, String searchChars ) :: boolean
+* __contains__( String str, char searchChar ) :: boolean *[RENAMED]*
+* __contains__( String str, String searchStr ) :: boolean *[RENAMED]*
+* __containsAny__( String str, char[] searchChars ) :: boolean *[RENAMED]*
+* __containsAny__( String str, String searchChars ) :: boolean *[RENAMED]*
 * __containsIgnoreCase__( String str, String searchStr ) :: boolean
 * __containsNone__( String str, char[] searchChars ) :: boolean
 * __containsNone__( String str, String invalidChars ) :: boolean
