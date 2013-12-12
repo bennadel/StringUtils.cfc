@@ -6,9 +6,13 @@ by [Ben Nadel][bennadel] (on [Google+][googleplus])
 A while back, I happened to come across this [StringUtils Java Library][javalib]. A number of the
 methods in the library are native to ColdFusion; however, many of them are not. I thought it would
 be a fun "code kata" to try an recreate this String Utils library as a ColdFusion functions. To be
-honest, I've been working a _lot_ lately and I thought this would be a fun little mental vacation.
+honest, __I've been working a _lot_ lately__ and I thought this would be a fun little mental 
+vacation; a little bit of "therapy," if you will.
 
-Here is a list of the functions in the String Utils library ( that I will be reproducing):
+Here is a list of the functions in the String Utils library (that I will be reproducing, or at 
+least trying to reproduce). Since ColdFusion doesn't support like-named functions with different 
+signatures, the multi-signature functions will have to be collapsed into one function with 
+internal routing logic based on the arguments.
 
 * __abbreviate__( String str, int maxWidth ) :: String
 * __abbreviate__( String str, int offset, int maxWidth ) :: String
