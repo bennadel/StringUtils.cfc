@@ -71,6 +71,16 @@
 			isEmpty( null ) : #utils.isEmpty( javaCast( "null", "" ) )#<br />
 		</p>
 
+		<h4>
+			isNotEmpty( value )
+		</h4>
+
+		<p>
+			isNotEmpty( "hello world" ) : #utils.isNotEmpty( "hello world" )#<br />
+			isNotEmpty( "" ) : #utils.isNotEmpty( "" )#<br />
+			isNotEmpty( null ) : #utils.isNotEmpty( javaCast( "null", "" ) )#<br />
+		</p>
+
 	</cfoutput>
 
 	<cfdump var="#utils#" />

@@ -82,6 +82,18 @@ component
 	}
 
 
+	/**
+	* @output false
+	* @description Checks if a String is not empty ("") and not null.
+	**/
+	public boolean function isNotEmpty( string value = "" ) {
+
+		return( ! isEmpty( value ) );
+
+	}
+
+
+
 	/*
 	String 	abbreviate(String str, int maxWidth)
 	Abbreviates a String using ellipses.
@@ -232,9 +244,6 @@ component
 	
 	boolean 	isNotBlank(String str)
 	Checks if a String is not empty (""), not null and not whitespace only.
-	
-	boolean 	isNotEmpty(String str)
-	Checks if a String is not empty ("") and not null.
 	
 	boolean 	isNumeric(String str)
 	Checks if the String contains only unicode digits.
