@@ -61,6 +61,16 @@
 			containsSubstring( "hello world", "hello" ) : #utils.containsSubstring( "hello world", "hello" )#<br />
 		</p>
 
+		<h4>
+			isEmpty( value )
+		</h4>
+
+		<p>
+			isEmpty( "hello world" ) : #utils.isEmpty( "hello world" )#<br />
+			isEmpty( "" ) : #utils.isEmpty( "" )#<br />
+			isEmpty( null ) : #utils.isEmpty( javaCast( "null", "" ) )#<br />
+		</p>
+
 	</cfoutput>
 
 	<cfdump var="#utils#" />

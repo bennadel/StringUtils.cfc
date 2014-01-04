@@ -14,7 +14,7 @@ component
 
 	/**
 	* @output false
-	* @description "Capitalizes a String changing the first letter to title case as per Character.toTitleCase(char)."
+	* @description Capitalizes a String changing the first letter to title case as per Character.toTitleCase(char).
 	**/
 	public string function capitalize( required string value ) {
 
@@ -27,8 +27,8 @@ component
 
 	/**
 	* @output false
-	* @description "Checks if the String contains any character in the given set of characters."
-	* @hint "Changed function name from [containsAny] in order to make it consistent with the containsSubstring function (which was also renamed)."
+	* @description Checks if the String contains any character in the given set of characters.
+	* @hint Changed function name from [containsAny] in order to make it consistent with the containsSubstring function (which was also renamed).
 	**/
 	public boolean function containsAnySubstring( 
 		required string value,
@@ -52,8 +52,8 @@ component
 
 	/**
 	* @output false
-	* @description "Checks if String contains a search character or string, handling null."
-	* @hint "Changed function name from [contains] in order to make ColdFusion compatible (conflicts with operator)."
+	* @description Checks if String contains a search character or string, handling null.
+	* @hint Changed function name from [contains] in order to make ColdFusion compatible (conflicts with operator).
 	**/
 	public boolean function containsSubstring( 
 		required string value,
@@ -67,6 +67,17 @@ component
 		}
 
 		return( !! find( substring, value ) );
+
+	}
+
+
+	/**
+	* @output false
+	* @description Checks if a String is empty ("") or null.
+	**/
+	public boolean function isEmpty( string value = "" ) {
+
+		return( ! len( value ) );
 
 	}
 
@@ -218,9 +229,6 @@ component
 	
 	boolean 	isBlank(String str)
 	Checks if a String is whitespace, empty ("") or null.
-	
-	boolean 	isEmpty(String str)
-	Checks if a String is empty ("") or null.
 	
 	boolean 	isNotBlank(String str)
 	Checks if a String is not empty (""), not null and not whitespace only.
