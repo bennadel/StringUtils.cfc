@@ -62,6 +62,17 @@
 		</p>
 
 		<h4>
+			isBlank( value )
+		</h4>
+
+		<p>
+			isBlank( "hello world" ) : #utils.isBlank( "hello world" )#<br />
+			isBlank( "" ) : #utils.isBlank( "" )#<br />
+			isBlank( "&nbsp;&nbsp;&nbsp;" ) : #utils.isBlank( "   " )#<br />
+			isBlank( null ) : #utils.isBlank( javaCast( "null", "" ) )#<br />
+		</p>
+
+		<h4>
 			isEmpty( value )
 		</h4>
 

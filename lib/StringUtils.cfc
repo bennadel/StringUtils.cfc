@@ -73,6 +73,17 @@ component
 
 	/**
 	* @output false
+	* @description Checks if a String is whitespace, empty ("") or null.
+	**/
+	public boolean function isBlank( string value = "" ) {
+
+		return( isEmpty( trim( value ) ) );
+
+	}
+
+
+	/**
+	* @output false
 	* @description Checks if a String is empty ("") or null.
 	**/
 	public boolean function isEmpty( string value = "" ) {
@@ -238,9 +249,6 @@ component
 	
 	boolean 	isAsciiPrintable(String str)
 	Checks if the string contains only ASCII printable characters.
-	
-	boolean 	isBlank(String str)
-	Checks if a String is whitespace, empty ("") or null.
 	
 	boolean 	isNotBlank(String str)
 	Checks if a String is not empty (""), not null and not whitespace only.
