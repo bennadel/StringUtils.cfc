@@ -103,6 +103,15 @@
 			isNotEmpty( null ) : #utils.isNotEmpty( javaCast( "null", "" ) )#<br />
 		</p>
 
+		<h4>
+			trimString( value )
+		</h4>
+
+		<p>
+			trimString( " hello world " ) : [#utils.trimString( " hello world " )#]<br />
+			trimString( null ) : <cftry> <cfset x = utils.trimString( javaCast( "null", "" ) ) /> #x# <cfcatch> null ( #cfcatch.message# ) </cfcatch></cftry>
+		</p>
+
 	</cfoutput>
 
 	<cfdump var="#utils#" />

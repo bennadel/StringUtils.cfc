@@ -115,6 +115,23 @@ component
 	}
 
 
+	/**
+	* @output false
+	* @description Removes control characters (char <= 32) from both ends of this String, handling null by returning null.
+	* @hint Changed function name from [trim] in order to make ColdFusion compatible (conflicts with native function).
+	**/
+	public string function trimString( string value ) {
+
+		if ( isNull( value ) ) {
+
+			return;
+
+		}
+
+		return( trim( value ) );
+
+	}
+
 
 	/*
 	String 	abbreviate(String str, int maxWidth)
@@ -521,9 +538,6 @@ component
 	
 	String 	swapCase(String str)
 	Swaps the case of a String changing upper and title case to lower case, and lower case to upper case.
-	
-	String 	trim(String str)
-	Removes control characters (char <= 32) from both ends of this String, handling null by returning null.
 	
 	String 	trimToEmpty(String str)
 	Removes control characters (char <= 32) from both ends of this String returning an empty String ("") if the String is empty ("") after the trim or if it is null.
