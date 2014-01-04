@@ -109,7 +109,7 @@
 
 		<p>
 			trimString( " hello world " ) : [#utils.trimString( " hello world " )#]<br />
-			trimString( null ) : <cftry> <cfset x = utils.trimString( javaCast( "null", "" ) ) /> #x# <cfcatch> null ( #cfcatch.message# ) </cfcatch></cftry>
+			trimString( null ) : <cftry> <cfset x = utils.trimString( javaCast( "null", "" ) ) /> #x# <cfcatch> null ( #cfcatch.message# ) </cfcatch></cftry><br />
 		</p>
 
 		<h4>
@@ -119,6 +119,16 @@
 		<p>
 			trimStringToEmpty( " hello world " ) : [#utils.trimStringToEmpty( " hello world " )#]<br />
 			trimStringToEmpty( null ) : [#utils.trimStringToEmpty( javaCast( "null", "" ) )#]<br />
+		</p>
+
+		<h4>
+			trimStringToNull( value )
+		</h4>
+
+		<p>
+			trimStringToNull( " hello world " ) : [#utils.trimStringToNull( " hello world " )#]<br />
+			trimStringToNull( " " ) : <cftry> <cfset x = utils.trimStringToNull( " " ) /> #x# <cfcatch> null ( #cfcatch.message# ) </cfcatch></cftry><br />
+			trimStringToNull( null ) : <cftry> <cfset x = utils.trimStringToNull( javaCast( "null", "" ) ) /> #x# <cfcatch> null ( #cfcatch.message# ) </cfcatch></cftry><br />
 		</p>
 
 	</cfoutput>

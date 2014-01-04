@@ -145,6 +145,26 @@ component
 	}
 
 
+	/**
+	* @output false
+	* @description Removes control characters (char <= 32) from both ends of this String returning null if the String is empty ("") after the trim or if it is null.
+	* @hint Changed function name from [trimToNull] in order to make it consistent with the trimString function (which was also renamed).
+	**/
+	public string function trimStringToNull( string value = "" ) {
+
+		// CAUTION: Combination function call and variable assignment. This works because 
+		// isEmpty() is not a native function; meaning, len( x = y ) would raise an exception.
+		if ( isEmpty( value = trim( value ) ) ) {
+
+			return;
+
+		}
+
+		return( value );
+
+	}
+
+
 
 	/*
 	String 	abbreviate(String str, int maxWidth)
@@ -551,9 +571,6 @@ component
 	
 	String 	swapCase(String str)
 	Swaps the case of a String changing upper and title case to lower case, and lower case to upper case.
-	
-	String 	trimToNull(String str)
-	Removes control characters (char <= 32) from both ends of this String returning null if the String is empty ("") after the trim or if it is null.
 	
 	String 	uncapitalize(String str)
 	Uncapitalizes a String changing the first letter to title case as per Character.toLowerCase(char).
