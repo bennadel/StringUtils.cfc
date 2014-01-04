@@ -92,6 +92,17 @@ component
 
 	}
 
+	
+	/**
+	* @output false
+	* @description Checks if a String is not empty (""), not null and not whitespace only.
+	**/
+	public boolean function isNotBlank( string value = "" ) {
+
+		return( ! isBlank( value ) );
+
+	}
+
 
 	/**
 	* @output false
@@ -249,9 +260,6 @@ component
 	
 	boolean 	isAsciiPrintable(String str)
 	Checks if the string contains only ASCII printable characters.
-	
-	boolean 	isNotBlank(String str)
-	Checks if a String is not empty (""), not null and not whitespace only.
 	
 	boolean 	isNumeric(String str)
 	Checks if the String contains only unicode digits.
