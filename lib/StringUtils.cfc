@@ -133,6 +133,19 @@ component
 	}
 
 
+	/**
+	* @output false
+	* @description Removes control characters (char <= 32) from both ends of this String returning an empty String ("") if the String is empty ("") after the trim or if it is null.
+	* @hint Changed function name from [trimToEmpty] in order to make it consistent with the trimString function (which was also renamed).
+	**/
+	public string function trimStringToEmpty( string value = "" ) {
+
+		return( trim( value ) );
+
+	}
+
+
+
 	/*
 	String 	abbreviate(String str, int maxWidth)
 	Abbreviates a String using ellipses.
@@ -538,9 +551,6 @@ component
 	
 	String 	swapCase(String str)
 	Swaps the case of a String changing upper and title case to lower case, and lower case to upper case.
-	
-	String 	trimToEmpty(String str)
-	Removes control characters (char <= 32) from both ends of this String returning an empty String ("") if the String is empty ("") after the trim or if it is null.
 	
 	String 	trimToNull(String str)
 	Removes control characters (char <= 32) from both ends of this String returning null if the String is empty ("") after the trim or if it is null.

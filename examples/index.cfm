@@ -112,6 +112,15 @@
 			trimString( null ) : <cftry> <cfset x = utils.trimString( javaCast( "null", "" ) ) /> #x# <cfcatch> null ( #cfcatch.message# ) </cfcatch></cftry>
 		</p>
 
+		<h4>
+			trimStringToEmpty( value )
+		</h4>
+
+		<p>
+			trimStringToEmpty( " hello world " ) : [#utils.trimStringToEmpty( " hello world " )#]<br />
+			trimStringToEmpty( null ) : [#utils.trimStringToEmpty( javaCast( "null", "" ) )#]<br />
+		</p>
+
 	</cfoutput>
 
 	<cfdump var="#utils#" />
