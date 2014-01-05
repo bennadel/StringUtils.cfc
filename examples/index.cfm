@@ -84,6 +84,16 @@
 		</p>
 
 		<h4>
+			isAlpha( value )
+		</h4>
+
+		<p>
+			isAlpha( "hello world" ) : #utils.isAlpha( "hello world" )#<br />
+			isAlpha( "helloworld" ) : #utils.isAlpha( "helloworld" )#<br />
+			isAlpha( "hello2world" ) : #utils.isAlpha( "hello2world" )#<br />
+		</p>
+
+		<h4>
 			isBlank( value )
 		</h4>
 
