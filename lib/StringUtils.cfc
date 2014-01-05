@@ -73,6 +73,17 @@ component
 
 	/**
 	* @output false
+	* @description Checks if the String contains only lowercase characters.
+	**/
+	public boolean function isAllLowerCase( required string value ) {
+
+		return( ! reFind( "[A-Z]", value ) );
+
+	}
+
+
+	/**
+	* @output false
 	* @description Checks if a String is whitespace, empty ("") or null.
 	**/
 	public boolean function isBlank( string value = "" ) {
@@ -289,9 +300,6 @@ component
 	
 	int 	indexOfIgnoreCase(String str, String searchStr, int startPos)
 	Case in-sensitive find of the first index within a String from the specified position.
-	
-	boolean 	isAllLowerCase(String str)
-	Checks if the String contains only lowercase characters.
 	
 	boolean 	isAllUpperCase(String str)
 	Checks if the String contains only uppercase characters.

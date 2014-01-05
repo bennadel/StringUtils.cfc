@@ -62,6 +62,16 @@
 		</p>
 
 		<h4>
+			isAllLowerCase( value )
+		</h4>
+
+		<p>
+			isAllLowerCase( "hello world" ) : #utils.isAllLowerCase( "hello world" )#<br />
+			isAllLowerCase( "Hello World" ) : #utils.isAllLowerCase( "Hello World" )#<br />
+			isAllLowerCase( "" ) : #utils.isAllLowerCase( "" )#<br />
+		</p>
+
+		<h4>
 			isBlank( value )
 		</h4>
 
