@@ -66,9 +66,21 @@
 		</h4>
 
 		<p>
+			isAllLowerCase( "hello world" ) : #utils.isAllLowerCase( "helloworld" )#<br />
 			isAllLowerCase( "hello world" ) : #utils.isAllLowerCase( "hello world" )#<br />
 			isAllLowerCase( "Hello World" ) : #utils.isAllLowerCase( "Hello World" )#<br />
 			isAllLowerCase( "" ) : #utils.isAllLowerCase( "" )#<br />
+		</p>
+
+		<h4>
+			isAllUpperCase( value )
+		</h4>
+
+		<p>
+			isAllUpperCase( "HELLO WORLD" ) : #utils.isAllUpperCase( "HELLOWORLD" )#<br />
+			isAllUpperCase( "HELLO WORLD" ) : #utils.isAllUpperCase( "HELLO WORLD" )#<br />
+			isAllUpperCase( "Hello World" ) : #utils.isAllUpperCase( "Hello World" )#<br />
+			isAllUpperCase( "" ) : #utils.isAllUpperCase( "" )#<br />
 		</p>
 
 		<h4>
